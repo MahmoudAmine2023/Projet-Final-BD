@@ -52,7 +52,8 @@ CREATE TABLE Clients.Client (
     Nom VARCHAR(50) NOT NULL,
     Adresse VARCHAR(100),
     Email VARCHAR(50),
-    Telephone VARCHAR(15)
+    Telephone VARCHAR(15),
+	CourrielEncrypt VARBINARY(max) 
 );
 GO
 CREATE TABLE Achats.ArticleCommande (
