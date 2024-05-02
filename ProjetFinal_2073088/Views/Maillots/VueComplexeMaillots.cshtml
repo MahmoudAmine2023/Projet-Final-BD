@@ -1,0 +1,97 @@
+﻿@model IEnumerable<ProjetFinal_2073088.Models.VwMaillotsAvecPromotion>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomEquipe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Taille)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Couleur)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Annee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EstPremium)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prix)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomPromotion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PourcentageReduction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateDebut)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateFin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrixConcurrents)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomEquipe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Taille)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Couleur)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Annee)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EstPremium)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Prix)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomPromotion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PourcentageReduction)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateDebut)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateFin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PrixConcurrents)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.MaillotId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.MaillotId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.MaillotId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

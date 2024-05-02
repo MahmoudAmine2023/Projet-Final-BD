@@ -26,6 +26,7 @@ namespace ProjetFinal_2073088.Data
         public virtual DbSet<Maillot> Maillots { get; set; } = null!;
         public virtual DbSet<MaillotPremium> MaillotPremia { get; set; } = null!;
         public virtual DbSet<Promotion> Promotions { get; set; } = null!;
+        public virtual DbSet<VwMaillotsAvecPromotion> VwMaillotsAvecPromotions { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -66,7 +67,7 @@ namespace ProjetFinal_2073088.Data
             modelBuilder.Entity<Concurrent>(entity =>
             {
                 entity.HasKey(e => e.ConcurentId)
-                    .HasName("PK__Concurre__B12BF83E87EB7CF5");
+                    .HasName("PK__Concurre__B12BF83E1B748007");
 
                 entity.HasOne(d => d.Maillot)
                     .WithMany(p => p.Concurrents)
@@ -90,6 +91,11 @@ namespace ProjetFinal_2073088.Data
                     .WithMany()
                     .HasForeignKey(d => d.MaillotId)
                     .HasConstraintName("FK_MaillotPremium_MaillotID");
+            });
+
+            modelBuilder.Entity<VwMaillotsAvecPromotion>(entity =>
+            {
+                entity.ToView("vw_MaillotsAvecPromotion", "Maillots");
             });
 
             OnModelCreatingPartial(modelBuilder);

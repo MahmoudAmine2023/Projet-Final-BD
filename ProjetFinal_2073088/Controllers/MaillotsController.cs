@@ -25,7 +25,14 @@ namespace ProjetFinal_2073088.Controllers
             var projetFinal_MaillotsContext = _context.Maillots.Include(m => m.Promotion);
             return View(await projetFinal_MaillotsContext.ToListAsync());
         }
+       
+        
+        public async Task<IActionResult> VueComplexeMaillots()
+        {
+           
+            return View(await _context.VwMaillotsAvecPromotions.ToListAsync());
 
+        }
         // GET: Maillots/Details/5
         public async Task<IActionResult> Details(int? id)
         {
