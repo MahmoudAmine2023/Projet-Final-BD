@@ -3,6 +3,7 @@ VALUES
     ('Promo1', 10.00, '2024-03-01', '2024-03-15'),
     ('Promo2', 15.00, '2024-03-05', '2024-03-20'),
     ('Promo3', 20.00, '2024-03-10', '2024-03-25');
+
 INSERT INTO Maillots.Maillot (NomEquipe, Taille, Couleur, Annee, Prix, EstPremium, PromotionID)
 VALUES 
     ('Real Madrid', 'S', 'Blanc', 2022, 89.99, 'Non', 1),
