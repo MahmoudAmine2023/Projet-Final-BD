@@ -1,8 +1,8 @@
-use ProjetFinal_Maillots
-
-CREATE Maillots.vw_MaillotsAvecPromotion 
+USE ProjetFinal_Maillots
+GO
+CREATE VIEW Maillots.vw_MaillotsAvecPromotion 
 AS
-SELECT
+	SELECT
     M.MaillotID,
     M.NomEquipe,
     M.Taille,
@@ -20,7 +20,6 @@ FROM
 LEFT JOIN
     Promotions.Promotion AS P
 	ON M.PromotionID = P.PromotionID
-	LEFT JOIN ConcurentsPrincipaux.Concurents C 
+	LEFT JOIN Concurrents.Concurrent C 
 	ON M.MaillotID = C.MaillotID
-
-SELECT  * FROM Maillots.vw_MaillotsAvecPromotion
+GO
