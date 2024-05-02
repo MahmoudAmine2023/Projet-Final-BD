@@ -1,4 +1,4 @@
-evolve migrate sqlserver -c "Data Source=.\SQLEXPRESS;Initial Catalog=ProjetFinal_Maillots;Integrated Security=True;Persist Security Info=False;Pooling=False;Encrypt=False" -s Clients -s Fournisseurs  -s Maillots  -s Promotions  -s Coucurrents  -s Achats --target-version x.x
+evolve migrate sqlserver -c "Data Source=.\SQLEXPRESS;Initial Catalog=ProjetFinal_Maillots;Integrated Security=True;Persist Security Info=False;Pooling=False;Encrypt=False" -s Clients -s Fournisseurs  -s Maillots  -s Promotions  -s Concurrents  -s Achats --target-version x.x
 
 
 dotnet ef dbcontext scaffold Name=ProjetFinal_Maillots Microsoft.EntityFrameworkCore.SqlServer -o Models --context-dir Data --data-annotations --force
