@@ -56,12 +56,15 @@ VALUES
     -- Ajoutez d'autres lignes selon vos besoins ...
 
 -- Insertion de données dans la table Clients.Client
-INSERT INTO Clients.Client (Nom, Adresse, Email, Telephone)
+INSERT INTO Clients.Client (Nom, Adresse, CourrielEncrypt, Telephone)
 VALUES 
-    ('Client1', 'Adresse1', 'client1@email.com', '1234567890'),
-    ('Client2', 'Adresse2', 'client2@email.com', '9876543210')
+    ('Client1', 'Adresse1', CONVERT(VARBINARY(MAX), 'client1@email.com'), '1234567890'),
+    ('Client2', 'Adresse2', CONVERT(VARBINARY(MAX), 'client2@email.com'), '9876543210');
     -- Ajoutez d'autres lignes selon vos besoins ...
 
+INSERT INTO Clients.Courriel(ClientID,Courriel)
+SELECT ClientID,CONVERT(VARCHAR(50),CourrielEncrypt) AS Courriel
+FROM Clients.Client
 -- Insertion de données dans la table Achats.Achat
 INSERT INTO Achats.Achat ( DateAchat, PrixTotal,ClientID,PromotionID)
 VALUES 

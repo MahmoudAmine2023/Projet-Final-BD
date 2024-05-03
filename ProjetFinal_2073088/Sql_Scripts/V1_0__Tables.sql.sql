@@ -51,7 +51,6 @@ CREATE TABLE Clients.Client (
     ClientID INT PRIMARY KEY IDENTITY,
     Nom VARCHAR(50) NOT NULL,
     Adresse VARCHAR(100),
-    Email VARCHAR(50),
     Telephone VARCHAR(15),
 	CourrielEncrypt VARBINARY(max) 
 );
@@ -86,6 +85,12 @@ CREATE TABLE Concurrents.Concurrent (
 );
 GO
 
+CREATE TABLE Clients.Courriel(
+ClientID INT,
+Courriel VARCHAR(50) NULL
+);
+GO
+
 
 -- Add foreign key constraints
 ALTER TABLE Maillots.MaillotPremium
@@ -116,3 +121,7 @@ FOREIGN KEY (PromotionID) REFERENCES Promotions.Promotion(PromotionID);
 ALTER TABLE Concurrents.Concurrent
 ADD CONSTRAINT FK_Concurents_Concurrent_MaillotID
 FOREIGN KEY(MaillotID) REFERENCES Maillots.Maillot(MaillotID)
+
+ALTER TABLE Clients.Courriel
+ADD CONSTRAINT FK_Clients_Courriel_ClientID
+FOREIGN KEY (ClientID) REFERENCES Clients.Client(ClientID);
