@@ -52,7 +52,7 @@ CREATE TABLE Clients.Client (
     Nom VARCHAR(50) NOT NULL,
     Adresse VARCHAR(100),
     Telephone VARCHAR(15),
-	CourrielEncrypt VARBINARY(max) 
+	Courriel  VARCHAR(100) 
 );
 GO
 CREATE TABLE Achats.ArticleCommande (
@@ -85,11 +85,7 @@ CREATE TABLE Concurrents.Concurrent (
 );
 GO
 
-CREATE TABLE Clients.Courriel(
-ClientID INT,
-Courriel VARCHAR(50) NULL
-);
-GO
+
 
 
 -- Add foreign key constraints
