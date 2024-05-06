@@ -52,7 +52,7 @@ CREATE TABLE Clients.Client (
     Nom VARCHAR(50) NOT NULL,
     Adresse VARCHAR(100),
     Telephone VARCHAR(15),
-	Courriel  VARCHAR(100) 
+	Courriel  NVARCHAR(100) 
 );
 GO
 CREATE TABLE Achats.ArticleCommande (
