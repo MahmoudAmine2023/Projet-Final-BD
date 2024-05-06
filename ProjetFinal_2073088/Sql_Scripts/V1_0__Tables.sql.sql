@@ -117,7 +117,3 @@ FOREIGN KEY (PromotionID) REFERENCES Promotions.Promotion(PromotionID);
 ALTER TABLE Concurrents.Concurrent
 ADD CONSTRAINT FK_Concurents_Concurrent_MaillotID
 FOREIGN KEY(MaillotID) REFERENCES Maillots.Maillot(MaillotID)
-
-ALTER TABLE Clients.Courriel
-ADD CONSTRAINT FK_Clients_Courriel_ClientID
-FOREIGN KEY (ClientID) REFERENCES Clients.Client(ClientID);

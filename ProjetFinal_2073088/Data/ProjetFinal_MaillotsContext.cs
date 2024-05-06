@@ -22,6 +22,7 @@ namespace ProjetFinal_2073088.Data
         public virtual DbSet<Changelog> Changelogs { get; set; } = null!;
         public virtual DbSet<Client> Clients { get; set; } = null!;
         public virtual DbSet<Concurrent> Concurrents { get; set; } = null!;
+        public virtual DbSet<Courriel> Courriels { get; set; } = null!;
         public virtual DbSet<Fournisseur> Fournisseurs { get; set; } = null!;
         public virtual DbSet<Maillot> Maillots { get; set; } = null!;
         public virtual DbSet<MaillotPremium> MaillotPremia { get; set; } = null!;
@@ -67,7 +68,7 @@ namespace ProjetFinal_2073088.Data
             modelBuilder.Entity<Concurrent>(entity =>
             {
                 entity.HasKey(e => e.ConcurentId)
-                    .HasName("PK__Concurre__B12BF83E1B748007");
+                    .HasName("PK__Concurre__B12BF83E6CAF476D");
 
                 entity.HasOne(d => d.Maillot)
                     .WithMany(p => p.Concurrents)

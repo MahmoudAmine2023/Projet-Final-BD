@@ -30,6 +30,7 @@ GO
  -- SUPRÉSSION DE LA COLONNE COURRIEL DANS CLIENT 
 ALTER TABLE Clients.Client
 DROP COLUMN Courriel;
+GO
 
  --SELECT  * FROM Clients.Client
  --SELECT  * FROM Clients.Courriel
@@ -76,7 +77,7 @@ BEGIN
 END
 GO*/
 
-CREATE OR ALTER  PROCEDURE Clients.USP_DeChiffrementAdresseCourrielClient
+CREATE PROCEDURE Clients.USP_DeChiffrementAdresseCourrielClient
     @ClientID INT
 AS
 BEGIN
@@ -129,8 +130,8 @@ BEGIN
 	-- Le scope identity va nous retourner l'id value de la derniere valeur identity rentrer 
     SET @ClientID = SCOPE_IDENTITY();
 	
-	INSERT INTO Clients.Courriel (ClientID, Courriel)
-    VALUES (@ClientID, @Courriel)
+	INSERT INTO Clients.Courriel (Courriel)
+    VALUES ( @Courriel)
 END
 GO
 

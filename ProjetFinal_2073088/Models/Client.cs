@@ -23,12 +23,10 @@ namespace ProjetFinal_2073088.Models
         [StringLength(100)]
         [Unicode(false)]
         public string? Adresse { get; set; }
-        [StringLength(50)]
-        [Unicode(false)]
-        public string? Email { get; set; }
         [StringLength(15)]
         [Unicode(false)]
         public string? Telephone { get; set; }
+        public byte[]? CourrielEncrypt { get; set; }
 
         [InverseProperty("Client")]
         public virtual ICollection<Achat> Achats { get; set; }
