@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using ProjetFinal_2073088.Data;
 using ProjetFinal_2073088.Models;
@@ -28,7 +29,7 @@ namespace ProjetFinal_2073088.Controllers
         }
 
         // GET: Clients/Details/5
-        public async Task<IActionResult> Details(int? id)
+        public async Task<IActionResult> Details(int id)
         {
             if (id == null || _context.Clients == null)
             {
@@ -42,6 +43,8 @@ namespace ProjetFinal_2073088.Controllers
                 return NotFound();
             }
 
+
+            string test  = await DeChiffrementCourriel(id);
             return View(client);
         }
 
@@ -58,6 +61,7 @@ namespace ProjetFinal_2073088.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ClientId,Nom,Adresse,Telephone,CourrielEncrypt")] Client client)
         {
+
             if (ModelState.IsValid)
             {
                 _context.Add(client);
@@ -80,7 +84,29 @@ namespace ProjetFinal_2073088.Controllers
             {
                 return NotFound();
             }
+
             return View(client);
+        }
+        public async Task<string> DeChiffrementCourriel(int clientID)
+        {
+           
+
+            var client = await _context.Clients.FindAsync(clientID);
+            string query = "EXEC Clients.USP_DeChiffrementAdresseCourrielClient @ClientID";
+
+            SqlParameter parameter = new SqlParameter{ ParameterName ="ClientID" , Value = client.ClientId };
+            try
+            {
+               return _context.Clients.FromSqlRaw(query, parameter).ToQueryString();
+            }
+            catch (Exception)
+            {
+
+                ModelState.AddModelError("", "Une erreur est survenue");
+            }
+            return null;
+            
+           
         }
 
         // POST: Clients/Edit/5
