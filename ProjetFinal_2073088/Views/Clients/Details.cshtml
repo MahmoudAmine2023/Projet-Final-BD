@@ -1,4 +1,4 @@
-﻿@model ProjetFinal_2073088.Models.Client
+﻿@model ProjetFinal_2073088.ViewModels.ProfileClientViewModel
 
 @{
     ViewData["Title"] = "Details";
@@ -12,42 +12,41 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nom)
+            @Html.DisplayNameFor(model => model.Client.Nom)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nom)
+            @Html.DisplayFor(model => model.Client.Nom)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Adresse)
+            @Html.DisplayNameFor(model => model.Client.Adresse)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Adresse)
+            @Html.DisplayFor(model => model.Client.Adresse)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Telephone)
+            @Html.DisplayNameFor(model => model.Client.Telephone)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Telephone)
+            @Html.DisplayFor(model => model.Client.Telephone)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CourrielEncrypt)
+            @Html.DisplayNameFor(model => model.Client.CourrielEncrypt)
+            <a class="fa fa-eye" aria-hidden="true" asp-action="DechiffrementCourriel" asp-controller="Clients" asp-route-clientID="@Model.Client.ClientId"></a>
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CourrielEncrypt)
-        </dd>
+            @Html.DisplayFor(model => model.Courriel)
+        </dd
         <dt class="col-sm-2">
-            <a class="fa fa-eye" aria-hidden="true"></a>
+           
         </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.CourrielEncrypt)
-        </dd>
+        
     </dl>
 </div>
 <div>
     
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.ClientId">Edit</a> |
+
     <a asp-action="Index">Back to List</a>
  
 

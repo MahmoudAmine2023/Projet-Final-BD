@@ -4,7 +4,7 @@ namespace ProjetFinal_2073088.ViewModels
 {
     public class ProfileClientViewModel
     {
-        public Client client { get; set; } = null!;
-        public Courriel courriel { get; set; } = null!;
+        public Client Client { get; set; } = null!;
+        public string Courriel { get; set; } = null!;
     }
 }

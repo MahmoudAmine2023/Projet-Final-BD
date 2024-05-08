@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using NuGet.Protocol;
 using ProjetFinal_2073088.Data;
 using ProjetFinal_2073088.Models;
+using ProjetFinal_2073088.ViewModels;
 
 namespace ProjetFinal_2073088.Controllers
 {
@@ -38,15 +41,88 @@ namespace ProjetFinal_2073088.Controllers
 
             var client = await _context.Clients
                 .FirstOrDefaultAsync(m => m.ClientId == id);
+
+            ProfileClientViewModel profileClientViewModel = new ProfileClientViewModel()
+            {
+                Client = client,
+                Courriel  = client.CourrielEncrypt.ToString(),
+               
+            };
             if (client == null)
             {
                 return NotFound();
             }
-
-
-            string test  = await DeChiffrementCourriel(id);
-            return View(client);
+            //await DechiffrementCourriel(id);
+            return View(profileClientViewModel);
         }
+        public async Task<ViewResult> DechiffrementCourriel(int clientID)
+        {
+   
+            string connectionString = _context.Database.GetDbConnection().ConnectionString;
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    await conn.OpenAsync();
+
+                    using (SqlCommand cmd = new SqlCommand("Clients.USP_DeChiffrementAdresseCourrielClient", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.Add(new SqlParameter("@ClientID", clientID));
+
+                        var decryptedEmailResult = string.Empty;
+
+                        using (SqlDataReader reader = await cmd.ExecuteReaderAsync())
+                        {
+                            if (await reader.ReadAsync())
+                            {
+                                decryptedEmailResult = reader["DecryptedEmail"].ToString();
+                            }
+                        }
+                        var client = await _context.Clients
+                            .FirstOrDefaultAsync(m => m.ClientId == clientID);
+
+                        ViewData["DecryptedEmail"] = decryptedEmailResult;
+                        ProfileClientViewModel clientView = new ProfileClientViewModel()
+                        {
+                            Courriel = decryptedEmailResult,
+                            Client = client
+                        };
+                        return View("Details", clientView);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Gestion des erreurs
+                ModelState.AddModelError("", $"Une erreur est survenue : {ex.Message}");
+                return View();
+            }
+            
+        }
+        //public async Task<ViewResult> DeChiffrementCourriel(int clientID)
+        //{
+        //    string query = "EXEC Clients.USP_DeChiffrementAdresseCourrielClient @ClientID";
+        //    SqlParameter parameter = new SqlParameter { ParameterName = "ClientID", Value = clientID };
+        //    try
+        //    {
+                
+
+        //        string[] decryptedEmail =  _context.Clients.FromSqlRaw(query, parameter).ToArrayAsync();
+        //        string decryptedEmail1 = decryptedEmail.ToString();
+                
+
+        //    }
+        //    catch (Exception)
+        //    {
+
+        //        ModelState.AddModelError("", "Une erreur est survenue");
+        //    }
+        //    return View();
+
+        //}
+        
 
         // GET: Clients/Create
         public IActionResult Create()
@@ -84,30 +160,10 @@ namespace ProjetFinal_2073088.Controllers
             {
                 return NotFound();
             }
-
+          
             return View(client);
         }
-        public async Task<string> DeChiffrementCourriel(int clientID)
-        {
-           
-
-            var client = await _context.Clients.FindAsync(clientID);
-            string query = "EXEC Clients.USP_DeChiffrementAdresseCourrielClient @ClientID";
-
-            SqlParameter parameter = new SqlParameter{ ParameterName ="ClientID" , Value = client.ClientId };
-            try
-            {
-               return _context.Clients.FromSqlRaw(query, parameter).ToQueryString();
-            }
-            catch (Exception)
-            {
-
-                ModelState.AddModelError("", "Une erreur est survenue");
-            }
-            return null;
-            
-           
-        }
+       
 
         // POST: Clients/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
