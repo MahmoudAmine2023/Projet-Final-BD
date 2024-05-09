@@ -1,0 +1,40 @@
+﻿@model ProjetFinal_2073088.ViewModels.MaillotEquipeViewModels
+
+@{
+    ViewData["Title"] = "Maillots de l'équipe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Maillots disponibles pour l'équipe @ViewBag.NomEquipe</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Maillot ID</th>
+            <th>Équipe</th>
+            <th>Taille</th>
+            <th>Couleur</th>
+            <th>Année</th>
+            <th>Est Premium</th>
+            <th>Prix</th>
+            <th>Nom Premium</th>
+            <th>Numéro</th>
+            <th>Flocage</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var maillot in Model.maillots)
+        {
+            <tr>
+                <td>@maillot.MaillotId</td>
+                <td>@maillot.NomEquipe</td>
+                <td>@maillot.Taille</td>
+                <td>@maillot.Couleur</td>
+                <td>@maillot.Annee</td>
+                <td>@maillot.Prix</td>
+            
+            </tr>
+        }
+    </tbody>
+</table>
+

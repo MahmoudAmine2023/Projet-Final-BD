@@ -4,9 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
+using NuGet.Protocol;
 using ProjetFinal_2073088.Data;
 using ProjetFinal_2073088.Models;
+using ProjetFinal_2073088.ViewModels;
 
 namespace ProjetFinal_2073088.Controllers
 {
@@ -24,6 +27,19 @@ namespace ProjetFinal_2073088.Controllers
         {
             var projetFinal_MaillotsContext = _context.Maillots.Include(m => m.Promotion);
             return View(await projetFinal_MaillotsContext.ToListAsync());
+        }
+        public async Task<IActionResult> MaillotsPourUnClub(string nomEquipe)
+        {
+            string query = "EXEC Maillots.usp_MaillotsDisponiblePourUneCertaineEquipe @NomEquipe";
+            List<SqlParameter> parameters = new List<SqlParameter>()
+            {
+                new SqlParameter{ ParameterName = "NomEquipe",Value = nomEquipe }
+             };
+            return View("MaillotsEquipe", new MaillotEquipeViewModels()
+            {
+                maillots = await _context.Maillots.FromSqlRaw(query, parameters.ToArray()).ToListAsync(),
+                
+            });
         }
        
         

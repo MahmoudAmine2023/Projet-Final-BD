@@ -64,8 +64,12 @@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.MaillotId">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.MaillotId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.MaillotId">Delete</a>
+                <a asp-action="Delete" asp-route-id="@item.MaillotId">Delete</a>  |
+                <a  asp-action="MaillotsPourUnClub" asp-controller="Maillots" asp-route-nomEquipe="@item.NomEquipe"> Maillots Avec Equipe </a>
             </td>
+             
+               
+                      
         </tr>
 }
     </tbody>
