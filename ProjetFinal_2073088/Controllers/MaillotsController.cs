@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using NuGet.Protocol;
+using NuGet.Protocol.Plugins;
 using ProjetFinal_2073088.Data;
 using ProjetFinal_2073088.Models;
 using ProjetFinal_2073088.ViewModels;
@@ -28,6 +29,7 @@ namespace ProjetFinal_2073088.Controllers
             var projetFinal_MaillotsContext = _context.Maillots.Include(m => m.Promotion);
             return View(await projetFinal_MaillotsContext.ToListAsync());
         }
+
         public async Task<IActionResult> MaillotsPourUnClub(string nomEquipe)
         {
             string query = "EXEC Maillots.usp_MaillotsDisponiblePourUneCertaineEquipe @NomEquipe";
@@ -64,8 +66,45 @@ namespace ProjetFinal_2073088.Controllers
             {
                 return NotFound();
             }
-
+            
             return View(maillot);
+        }
+        [HttpPost]
+        public async Task<IActionResult> AjouterImage(ImageUploadVM iuvm)
+        {
+            
+            if (_context.Maillots == null)
+            {
+                return Problem("Entity set  is null.");
+            }
+
+            if (ModelState.IsValid)
+            {
+                // Trouver le fruit choisi par l'utilisateur
+                Fruit? fruit = await _context.Fruits.FirstOrDefaultAsync(x => x.Nom == iuvm.);
+                if (fruit == null)
+                {
+                    ModelState.AddModelError("NomFruit", "Ce fruit n'existe pas.");
+                    return View();
+                }
+
+                // Récupérer l'image dans iuvm.FormFile
+                // Remplir la propriété fruit.Photo
+
+                if (iuvm.FormFile != null && iuvm.FormFile.Length >= 0)
+                {
+                    MemoryStream stream = new MemoryStream();
+                    await iuvm.FormFile.CopyToAsync(stream);
+                    byte[] photo = stream.ToArray();
+                     = photo;
+                }
+
+                await _context.SaveChangesAsync();
+                ViewData["message"] = "Image ajoutée pour " + iuvm.NomFruit + " !";
+                return View("Index");
+            }
+            ModelState.AddModelError("", "Il y a un problème avec le fichier fourni");
+            return View();
         }
 
         // GET: Maillots/Create
