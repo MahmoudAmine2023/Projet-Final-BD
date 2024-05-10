@@ -69,8 +69,12 @@ namespace ProjetFinal_2073088.Controllers
             
             return View(maillot);
         }
+        public IActionResult AjouterImage()
+        {
+            return View("AjouterImage");
+        }
         [HttpPost]
-        public async Task<IActionResult> AjouterImage(ImageUploadVM iuvm)
+        public async Task<IActionResult> AjouterImage(ImageUploadVM iuvm , int maillotID)
         {
             
             if (_context.Maillots == null)
@@ -80,11 +84,12 @@ namespace ProjetFinal_2073088.Controllers
 
             if (ModelState.IsValid)
             {
-                // Trouver le fruit choisi par l'utilisateur
-                Fruit? fruit = await _context.Fruits.FirstOrDefaultAsync(x => x.Nom == iuvm.);
-                if (fruit == null)
+                
+
+                Maillot maillot = await _context.Maillots.FirstOrDefaultAsync(x => x.MaillotId == maillotID);
+                if (maillot == null)
                 {
-                    ModelState.AddModelError("NomFruit", "Ce fruit n'existe pas.");
+                    ModelState.AddModelError("Maillot", "Ce maillot n'existe pas.");
                     return View();
                 }
 
@@ -96,11 +101,12 @@ namespace ProjetFinal_2073088.Controllers
                     MemoryStream stream = new MemoryStream();
                     await iuvm.FormFile.CopyToAsync(stream);
                     byte[] photo = stream.ToArray();
-                     = photo;
+                    
+                   // iuvm. = photo;
                 }
 
                 await _context.SaveChangesAsync();
-                ViewData["message"] = "Image ajoutée pour " + iuvm.NomFruit + " !";
+                ViewData["message"] = "Image ajoutée pour "  + " !";
                 return View("Index");
             }
             ModelState.AddModelError("", "Il y a un problème avec le fichier fourni");
