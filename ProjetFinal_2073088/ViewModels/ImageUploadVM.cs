@@ -4,8 +4,6 @@
     {
         public IFormFile? FormFile { get; set; }
 
-        public ImageUploadVM Image { get; set; } = null!;
-
         public int idMaillot { get; set; }  
     }
 }

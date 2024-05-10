@@ -29,6 +29,21 @@ namespace ProjetFinal_2073088.Controllers
             var projetFinal_MaillotsContext = _context.Maillots.Include(m => m.Promotion);
             return View(await projetFinal_MaillotsContext.ToListAsync());
         }
+        public async Task<IActionResult> AfficherImageEtDetailsMaillotss(AfficherImageEtDetailsMaillotss ivm)
+        {
+            
+            var maillotsWithPhotos = await _context.Maillots
+                .Where(x => x.Photo != null)
+                .ToListAsync();
+
+      
+            ivm.ImageUrl = maillotsWithPhotos
+                .Select(x => $"data:image/png;base64, {Convert.ToBase64String(x.Photo)}")
+                .ToList();
+
+            return View("DetailsMaillotsAvecImages", ivm);
+        }
+
 
         public async Task<IActionResult> MaillotsPourUnClub(string nomEquipe)
         {
@@ -74,7 +89,7 @@ namespace ProjetFinal_2073088.Controllers
             return View("AjouterImage");
         }
         [HttpPost]
-        public async Task<IActionResult> AjouterImage(ImageUploadVM iuvm , int maillotID)
+        public async Task<IActionResult> AjouterImage(ImageUploadVM iuvm)
         {
             
             if (_context.Maillots == null)
@@ -86,7 +101,7 @@ namespace ProjetFinal_2073088.Controllers
             {
                 
 
-                Maillot maillot = await _context.Maillots.FirstOrDefaultAsync(x => x.MaillotId == maillotID);
+                Maillot maillot = await _context.Maillots.FirstOrDefaultAsync(x => x.MaillotId == iuvm.idMaillot);
                 if (maillot == null)
                 {
                     ModelState.AddModelError("Maillot", "Ce maillot n'existe pas.");
@@ -101,13 +116,14 @@ namespace ProjetFinal_2073088.Controllers
                     MemoryStream stream = new MemoryStream();
                     await iuvm.FormFile.CopyToAsync(stream);
                     byte[] photo = stream.ToArray();
+                    maillot.Photo = photo;
                     
                    // iuvm. = photo;
                 }
 
                 await _context.SaveChangesAsync();
                 ViewData["message"] = "Image ajoutée pour "  + " !";
-                return View("Index");
+                return View("Details",maillot);
             }
             ModelState.AddModelError("", "Il y a un problème avec le fichier fourni");
             return View();

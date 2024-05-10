@@ -1,6 +1,13 @@
 ﻿@model ProjetFinal_2073088.ViewModels.AfficherImageEtDetailsMaillotss
 
 @{
-  
     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model.ImageUrl != null)
+{
+    foreach (var url in Model.ImageUrl)
+    {
+        <img src="@url" alt="Maillot Image" />
+    }
 }

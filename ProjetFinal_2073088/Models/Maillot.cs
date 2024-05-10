@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 namespace ProjetFinal_2073088.Models
 {
     [Table("Maillot", Schema = "Maillots")]
+    [Index("Identifiant", Name = "DF_Image_Identifiant", IsUnique = true)]
     public partial class Maillot
     {
         public Maillot()
@@ -33,6 +34,8 @@ namespace ProjetFinal_2073088.Models
         public decimal Prix { get; set; }
         [Column("PromotionID")]
         public int? PromotionId { get; set; }
+        public Guid Identifiant { get; set; }
+        public byte[]? Photo { get; set; }
 
         [ForeignKey("PromotionId")]
         [InverseProperty("Maillots")]

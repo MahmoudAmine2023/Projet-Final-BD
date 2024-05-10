@@ -17,7 +17,7 @@ GO
 ALTER DATABASE ProjetFinal_Maillots
 ADD FILE(
 Name = FG_Images_2073088,
-FILENAME  = 'C:\EspaceLabo\FG_Images_2073088'
+FILENAME  = 'C:\FG_Images_2073088'
 )
 TO FILEGROUP FG_Images_2073088
 GO 

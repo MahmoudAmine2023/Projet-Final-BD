@@ -68,7 +68,7 @@ namespace ProjetFinal_2073088.Data
             modelBuilder.Entity<Concurrent>(entity =>
             {
                 entity.HasKey(e => e.ConcurentId)
-                    .HasName("PK__Concurre__B12BF83E6CAF476D");
+                    .HasName("PK__Concurre__B12BF83E7DABB4E7");
 
                 entity.HasOne(d => d.Maillot)
                     .WithMany(p => p.Concurrents)
@@ -78,6 +78,8 @@ namespace ProjetFinal_2073088.Data
 
             modelBuilder.Entity<Maillot>(entity =>
             {
+                entity.Property(e => e.Identifiant).HasDefaultValueSql("(newid())");
+
                 entity.HasOne(d => d.Promotion)
                     .WithMany(p => p.Maillots)
                     .HasForeignKey(d => d.PromotionId)

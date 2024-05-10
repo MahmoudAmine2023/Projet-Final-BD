@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.EntityFrameworkCore;
@@ -27,7 +26,6 @@ namespace ProjetFinal_2073088.Models
         [StringLength(15)]
         [Unicode(false)]
         public string? Telephone { get; set; }
-        [DisplayName("Courriel")]
         public byte[]? CourrielEncrypt { get; set; }
 
         [InverseProperty("Client")]
