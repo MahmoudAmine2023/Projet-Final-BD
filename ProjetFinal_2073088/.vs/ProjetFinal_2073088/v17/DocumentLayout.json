@@ -3,52 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|c:\\users\\mahmo\\desktop\\app\\projet-final-bd\\projetfinal_2073088\\viewmodels\\maillotfiltre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|solutionrelative:viewmodels\\maillotfiltre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|c:\\users\\mahmo\\desktop\\app\\projet-final-bd\\projetfinal_2073088\\sql_scripts\\v1_6__performance.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|solutionrelative:sql_scripts\\v1_6__performance.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|c:\\users\\mahmo\\desktop\\app\\projet-final-bd\\projetfinal_2073088\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|c:\\users\\mahmo\\desktop\\app\\projet-final-bd\\projetfinal_2073088\\views\\maillots\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|solutionrelative:views\\maillots\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|c:\\users\\mahmo\\desktop\\app\\projet-final-bd\\projetfinal_2073088\\controllers\\maillotscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|solutionrelative:controllers\\maillotscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|c:\\users\\mahmo\\desktop\\app\\projet-final-bd\\projetfinal_2073088\\views\\maillots\\detailsmaillotsavecimages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|solutionrelative:views\\maillots\\detailsmaillotsavecimages.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|c:\\users\\mahmo\\desktop\\app\\projet-final-bd\\projetfinal_2073088\\viewmodels\\afficherimageetdetailsmaillotss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|solutionrelative:viewmodels\\afficherimageetdetailsmaillotss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|c:\\users\\mahmo\\desktop\\app\\projet-final-bd\\projetfinal_2073088\\models\\maillot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|solutionrelative:models\\maillot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|c:\\users\\mahmo\\desktop\\app\\projet-final-bd\\projetfinal_2073088\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|solutionrelative:controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|c:\\users\\mahmo\\desktop\\app\\projet-final-bd\\projetfinal_2073088\\views\\maillots\\ajouterimage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|solutionrelative:views\\maillots\\ajouterimage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|c:\\users\\mahmo\\desktop\\app\\projet-final-bd\\projetfinal_2073088\\views\\maillots\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|solutionrelative:views\\maillots\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|c:\\users\\mahmo\\desktop\\app\\projet-final-bd\\projetfinal_2073088\\sql_scripts\\v1_4__procedurestockeemasterdetail.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|solutionrelative:sql_scripts\\v1_4__procedurestockeemasterdetail.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|c:\\users\\mahmo\\desktop\\app\\projet-final-bd\\projetfinal_2073088\\data\\projetfinal_maillotscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|solutionrelative:data\\projetfinal_maillotscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|c:\\users\\mahmo\\desktop\\app\\projet-final-bd\\projetfinal_2073088\\sql_scripts\\v1_5__traitementdesimages.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|solutionrelative:sql_scripts\\v1_5__traitementdesimages.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|c:\\users\\mahmo\\desktop\\app\\projet-final-bd\\projetfinal_2073088\\sql_scripts\\v1_4__procedurestockeemasterdetail.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
-      "RelativeMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|solutionrelative:sql_scripts\\v1_4__procedurestockeemasterdetail.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+      "AbsoluteMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|c:\\users\\mahmo\\desktop\\app\\projet-final-bd\\projetfinal_2073088\\sql_scripts\\v1_6__performance.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{3223C183-0B46-4730-B8F2-35DB1CE5868F}|ProjetFinal_2073088.csproj|solutionrelative:sql_scripts\\v1_6__performance.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -77,142 +49,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Views\\Maillots\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Maillots\\Index.cshtml",
-              "ToolTip": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Views\\Maillots\\Index.cshtml",
-              "RelativeToolTip": "Views\\Maillots\\Index.cshtml",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAAEMAAABwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T17:46:03.039Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AfficherImageEtDetailsMaillotss.cs",
-              "DocumentMoniker": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\ViewModels\\AfficherImageEtDetailsMaillotss.cs",
-              "RelativeDocumentMoniker": "ViewModels\\AfficherImageEtDetailsMaillotss.cs",
-              "ToolTip": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\ViewModels\\AfficherImageEtDetailsMaillotss.cs",
-              "RelativeToolTip": "ViewModels\\AfficherImageEtDetailsMaillotss.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Title": "MaillotFiltre.cs",
+              "DocumentMoniker": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\ViewModels\\MaillotFiltre.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MaillotFiltre.cs",
+              "ToolTip": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\ViewModels\\MaillotFiltre.cs",
+              "RelativeToolTip": "ViewModels\\MaillotFiltre.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T17:23:07.556Z",
+              "WhenOpened": "2024-05-10T19:20:42.506Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MaillotsController.cs",
-              "DocumentMoniker": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Controllers\\MaillotsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\MaillotsController.cs",
-              "ToolTip": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Controllers\\MaillotsController.cs",
-              "RelativeToolTip": "Controllers\\MaillotsController.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAQwCsAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-07T21:44:50.09Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Maillot.cs",
-              "DocumentMoniker": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Models\\Maillot.cs",
-              "RelativeDocumentMoniker": "Models\\Maillot.cs",
-              "ToolTip": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Models\\Maillot.cs",
-              "RelativeToolTip": "Models\\Maillot.cs",
-              "ViewState": "AQIAABcAAAAAAAAAAAAYwCIAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T16:55:37.432Z",
+              "Title": "V1_6__Performance.sql ",
+              "DocumentMoniker": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Sql_Scripts\\V1_6__Performance.sql",
+              "RelativeDocumentMoniker": "Sql_Scripts\\V1_6__Performance.sql",
+              "ToolTip": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Sql_Scripts\\V1_6__Performance.sql",
+              "RelativeToolTip": "Sql_Scripts\\V1_6__Performance.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-05-10T19:14:06.843Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DetailsMaillotsAvecImages.cshtml",
-              "DocumentMoniker": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Views\\Maillots\\DetailsMaillotsAvecImages.cshtml",
-              "RelativeDocumentMoniker": "Views\\Maillots\\DetailsMaillotsAvecImages.cshtml",
-              "ToolTip": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Views\\Maillots\\DetailsMaillotsAvecImages.cshtml",
-              "RelativeToolTip": "Views\\Maillots\\DetailsMaillotsAvecImages.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACMAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T04:07:34.291Z",
+              "WhenOpened": "2024-05-10T19:12:51.757Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ClientsController.cs",
-              "DocumentMoniker": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Controllers\\ClientsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ClientsController.cs",
-              "ToolTip": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Controllers\\ClientsController.cs",
-              "RelativeToolTip": "Controllers\\ClientsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T17:26:55.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ProjetFinal_MaillotsContext.cs",
-              "DocumentMoniker": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Data\\ProjetFinal_MaillotsContext.cs",
-              "RelativeDocumentMoniker": "Data\\ProjetFinal_MaillotsContext.cs",
-              "ToolTip": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Data\\ProjetFinal_MaillotsContext.cs",
-              "RelativeToolTip": "Data\\ProjetFinal_MaillotsContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T17:05:20.411Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AjouterImage.cshtml",
-              "DocumentMoniker": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Views\\Maillots\\AjouterImage.cshtml",
-              "RelativeDocumentMoniker": "Views\\Maillots\\AjouterImage.cshtml",
-              "ToolTip": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Views\\Maillots\\AjouterImage.cshtml",
-              "RelativeToolTip": "Views\\Maillots\\AjouterImage.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAABIAAAA",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Views\\Maillots\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Maillots\\Index.cshtml",
+              "ToolTip": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Views\\Maillots\\Index.cshtml",
+              "RelativeToolTip": "Views\\Maillots\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEMAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T17:11:34.278Z",
+              "WhenOpened": "2024-05-10T17:46:03.039Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Views\\Maillots\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\Maillots\\Details.cshtml",
-              "ToolTip": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Views\\Maillots\\Details.cshtml",
-              "RelativeToolTip": "Views\\Maillots\\Details.cshtml",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAiwEQAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T17:18:33.817Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "V1_4__ProcedureStockeeMasterDetail.sql ",
-              "DocumentMoniker": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Sql_Scripts\\V1_4__ProcedureStockeeMasterDetail.sql",
-              "RelativeDocumentMoniker": "Sql_Scripts\\V1_4__ProcedureStockeeMasterDetail.sql",
-              "ToolTip": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Sql_Scripts\\V1_4__ProcedureStockeeMasterDetail.sql",
-              "RelativeToolTip": "Sql_Scripts\\V1_4__ProcedureStockeeMasterDetail.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-05-10T16:58:36.659Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "V1_5__TraitementDesImages.sql",
-              "DocumentMoniker": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Sql_Scripts\\V1_5__TraitementDesImages.sql",
-              "RelativeDocumentMoniker": "Sql_Scripts\\V1_5__TraitementDesImages.sql",
-              "ToolTip": "C:\\Users\\mahmo\\Desktop\\App\\Projet-Final-BD\\ProjetFinal_2073088\\Sql_Scripts\\V1_5__TraitementDesImages.sql",
-              "RelativeToolTip": "Sql_Scripts\\V1_5__TraitementDesImages.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-05-10T03:29:07.268Z"
             }
           ]
         }
