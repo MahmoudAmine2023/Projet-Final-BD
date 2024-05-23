@@ -32,7 +32,7 @@ namespace ProjetFinal_2073088.Controllers
         public async Task<IActionResult> AfficherImageEtDetailsMaillotss(int id)
         {
             var maillotWithPhoto = await _context.Maillots
-                .Where(x => x.MaillotId == id && x.Photo != null) // Filter out null Photos
+                .Where(x => x.MaillotId == id && x.Photo != null) 
                 .ToListAsync();
 
             var ivm = new AfficherImageEtDetailsMaillotss
@@ -155,7 +155,37 @@ namespace ProjetFinal_2073088.Controllers
             ViewData["PromotionId"] = new SelectList(_context.Promotions, "PromotionId", "PromotionId", maillot.PromotionId);
             return View(maillot);
         }
+        public async Task<IActionResult> FilteredMaillots(List<string> selectedTeams, List<int> selectedYears)
+        {
+            var allTeams = await _context.Maillots.Select(m => m.NomEquipe).Distinct().ToListAsync();
+            var allYears = await _context.Maillots.Select(m => m.Annee).Distinct().ToListAsync();
 
+            IQueryable<Maillot> query = _context.Maillots;
+
+            if (selectedTeams != null && selectedTeams.Any())
+            {
+                query = query.Where(m => selectedTeams.Contains(m.NomEquipe));
+            }
+
+            if (selectedYears != null && selectedYears.Any())
+            {
+                query = query.Where(m => selectedYears.Contains(m.Annee));
+            }
+
+            // Execute the query and fetch the data only after all filters have been applied
+            var maillots = await query.ToListAsync();
+
+            var viewModel = new MaillotFiltre
+            {
+                AllTeams = allTeams,
+                AllYears = allYears,
+                SelectedTeams = selectedTeams,
+                SelectedYears = selectedYears,
+                Maillots = maillots
+            };
+
+            return View(viewModel);
+        }
         // GET: Maillots/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -208,7 +238,7 @@ namespace ProjetFinal_2073088.Controllers
             ViewData["PromotionId"] = new SelectList(_context.Promotions, "PromotionId", "PromotionId", maillot.PromotionId);
             return View(maillot);
         }
-
+       
         // GET: Maillots/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {

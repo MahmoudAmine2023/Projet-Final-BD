@@ -1,0 +1,75 @@
+﻿@model ProjetFinal_2073088.ViewModels.MaillotFiltre
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Filter Maillots</h2>
+
+<form method="get" asp-action="FilteredMaillots">
+    <div class="form-group">
+        <h3>Teams</h3>
+        @foreach (var team in Model.AllTeams)
+        {
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="selectedTeams" value="@team" id="team_@team"
+                @(Model.SelectedTeams != null && Model.SelectedTeams.Contains(team) ? "checked" : "")>
+                <label class="form-check-label" for="team_@team">
+                    @team
+                </label>
+            </div>
+        }
+    </div>
+    <div class="form-group">
+        <h3>Years</h3>
+        @foreach (var year in Model.AllYears)
+        {
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="selectedYears" value="@year" id="year_@year"
+                @(Model.SelectedYears != null && Model.SelectedYears.Contains(year) ? "checked" : "")>
+                <label class="form-check-label" for="year_@year">
+                    @year
+                </label>
+            </div>
+        }
+    </div>
+    <button type="submit" class="btn btn-primary">Apply Filters</button>
+</form>
+
+<h3>Results</h3>
+
+@if (Model.Maillots != null && Model.Maillots.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nom d'Équipe</th>
+                <th>Année</th>
+                <th>Couleur</th>
+                <th>Prix</th>
+                <th>Photo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var maillot in Model.Maillots)
+            {
+                <tr>
+                    <td>@maillot.NomEquipe</td>
+                    <td>@maillot.Annee</td>
+                    <td>@maillot.Couleur</td>
+                    <td>@maillot.Prix</td>
+                    <td>
+                        @if (maillot.Photo != null)
+                        {
+                            <img src="data:image/png;base64,@Convert.ToBase64String(maillot.Photo)" alt="Maillot Image" style="width: 100px; height: auto;" />
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No maillots found.</p>
+}

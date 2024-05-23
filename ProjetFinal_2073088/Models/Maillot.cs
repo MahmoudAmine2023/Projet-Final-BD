@@ -27,7 +27,7 @@ namespace ProjetFinal_2073088.Models
         [StringLength(20)]
         [Unicode(false)]
         public string? Couleur { get; set; }
-        public int? Annee { get; set; }
+        public int Annee { get; set; }
         [StringLength(10)]
         public string? EstPremium { get; set; }
         [Column(TypeName = "decimal(10, 2)")]
