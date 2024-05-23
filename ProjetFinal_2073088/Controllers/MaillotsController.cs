@@ -31,12 +31,10 @@ namespace ProjetFinal_2073088.Controllers
         }
         public async Task<IActionResult> AfficherImageEtDetailsMaillotss(int id)
         {
-           
             var maillotWithPhoto = await _context.Maillots
-                .Where(x => x.MaillotId == id)
+                .Where(x => x.MaillotId == id && x.Photo != null) // Filter out null Photos
                 .ToListAsync();
 
-            // Initialize the view model
             var ivm = new AfficherImageEtDetailsMaillotss
             {
                 idMaillot = id,
@@ -45,9 +43,9 @@ namespace ProjetFinal_2073088.Controllers
                     .ToList()
             };
 
-            // Return the view with the view model
             return View("DetailsMaillotsAvecImages", ivm);
         }
+
 
 
         public async Task<IActionResult> MaillotsPourUnClub(string nomEquipe)

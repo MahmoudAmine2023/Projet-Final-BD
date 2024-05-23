@@ -4,10 +4,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@if (Model.ImageUrl != null)
+@if (Model.ImageUrl != null && Model.ImageUrl.Any())
 {
     foreach (var url in Model.ImageUrl)
     {
         <img src="@url" alt="Maillot Image" />
     }
+}
+else
+{
+    <p>No images available for this maillot.</p>
 }
