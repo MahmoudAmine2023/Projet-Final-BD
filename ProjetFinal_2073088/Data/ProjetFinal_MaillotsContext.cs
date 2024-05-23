@@ -68,7 +68,7 @@ namespace ProjetFinal_2073088.Data
             modelBuilder.Entity<Concurrent>(entity =>
             {
                 entity.HasKey(e => e.ConcurentId)
-                    .HasName("PK__Concurre__B12BF83E7DABB4E7");
+                    .HasName("PK__Concurre__B12BF83E5B00DC6E");
 
                 entity.HasOne(d => d.Maillot)
                     .WithMany(p => p.Concurrents)

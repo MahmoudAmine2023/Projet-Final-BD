@@ -4,7 +4,7 @@ namespace ProjetFinal_2073088.ViewModels
 {
     public class AfficherImageEtDetailsMaillotss
     {
-        public string idMaillot { get; set; } = null!;
+        public int idMaillot { get; set; } 
         public List<string>? ImageUrl { get; set; }
         
     }

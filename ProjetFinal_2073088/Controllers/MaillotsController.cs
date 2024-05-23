@@ -29,18 +29,23 @@ namespace ProjetFinal_2073088.Controllers
             var projetFinal_MaillotsContext = _context.Maillots.Include(m => m.Promotion);
             return View(await projetFinal_MaillotsContext.ToListAsync());
         }
-        public async Task<IActionResult> AfficherImageEtDetailsMaillotss(AfficherImageEtDetailsMaillotss ivm)
+        public async Task<IActionResult> AfficherImageEtDetailsMaillotss(int id)
         {
-            
-            var maillotsWithPhotos = await _context.Maillots
-                .Where(x => x.Photo != null)
+           
+            var maillotWithPhoto = await _context.Maillots
+                .Where(x => x.MaillotId == id)
                 .ToListAsync();
 
-      
-            ivm.ImageUrl = maillotsWithPhotos
-                .Select(x => $"data:image/png;base64, {Convert.ToBase64String(x.Photo)}")
-                .ToList();
+            // Initialize the view model
+            var ivm = new AfficherImageEtDetailsMaillotss
+            {
+                idMaillot = id,
+                ImageUrl = maillotWithPhoto
+                    .Select(x => $"data:image/png;base64,{Convert.ToBase64String(x.Photo)}")
+                    .ToList()
+            };
 
+            // Return the view with the view model
             return View("DetailsMaillotsAvecImages", ivm);
         }
 

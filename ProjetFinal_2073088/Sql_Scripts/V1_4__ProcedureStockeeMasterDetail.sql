@@ -16,9 +16,7 @@ BEGIN
         MP.Nom AS NomPremium,
         MP.Numero,
         MP.Flocage,
-		M.PromotionID,
-		M.Identifiant,
-		M.Photo
+		M.PromotionID
     FROM
         Maillots.Maillot AS M
     LEFT JOIN
